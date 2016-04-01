@@ -1,0 +1,19 @@
+{
+  "name": "thinky-tutorials",
+  "version": "1.0.0",
+  "description": "Future Studio Tutorials totally focussed on Thinky ",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.7.0",
+    "thinky": "^2.2.6",
+    "when": "^3.7.7"
+  }
+}
