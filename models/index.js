@@ -1,5 +1,6 @@
 var user = require('./user')
 var subscription = require('./subscription')
+var plan = require('./plan')
 
 
 /**
@@ -10,7 +11,7 @@ var subscription = require('./subscription')
  * @param  {string}  user_id - foreign key, provides the owner id
  * @param  {string}  id - subscription id field
  */
-user.hasOne(subscription, 'subscriptions', 'id', 'user_id')
+user.hasOne(subscription, 'subscription', 'id', 'user_id')
 
 /**
  * Relation to the owner of this subscription
@@ -21,9 +22,16 @@ user.hasOne(subscription, 'subscriptions', 'id', 'user_id')
  * @param  {string}  id - subscription id field
  */
 subscription.belongsTo(user, 'user', 'user_id', 'id')
+subscription.hasOne(plan, 'plan', 'id', 'plan_id')
+
+/**
+ * Relation between subscription and plan
+ */
+plan.belongsTo(subscription, 'subscription', 'plan_id', 'id')
 
 
 module.exports = {
   User: user,
-  Subscription: subscription
+  Subscription: subscription,
+  Plan: plan
 }

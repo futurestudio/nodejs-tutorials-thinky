@@ -6,12 +6,11 @@ var type = thinky.type
 /**
  * Define model and properties
  */
-var Subscription = thinky.createModel('Subscription', {
+var Plan = thinky.createModel('Plan', {
   id: type.string().default(r.uuid()),
   user_id: type.string(),
   name: type.string(),
-  plan_id: type.string(),
-  ends_at: type.date()
+  price: type.number()
 })
 
-module.exports = Subscription
+module.exports = Plan
