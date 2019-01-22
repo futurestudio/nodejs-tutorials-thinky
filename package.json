@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "~0.8.7",
-    "lodash": "~4.16.4",
+    "bcrypt": "~3.0.3",
+    "lodash": "~4.17.11",
     "thinky": "~2.3.7",
     "when": "~3.7.7"
   }
